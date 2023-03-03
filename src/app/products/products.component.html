@@ -1,0 +1,20 @@
+<header>Products</header>
+<div id="product-container">
+    <ng-container *ngFor="let item of products">
+        <div id="container">
+            <div id="product-item">
+                <button  id="wish-icon">
+                    <i class="fa fa-heart-o" style="font-size:20px;color:red"></i>
+                </button>
+                <img src={{item.product_img}}>
+                <h4>{{item.product_Name}}</h4>
+                <p>{{item.product_Desc}}</p>
+                <h4>Rs {{item.product_Price}}/-</h4>
+                <button id="button-right">Add to Cart</button>
+                <button>Buy Now</button>
+            </div>
+        </div>
+    </ng-container>
+</div>
+
+
