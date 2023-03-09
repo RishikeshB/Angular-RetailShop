@@ -1,17 +1,16 @@
 <header>Products</header>
-<div id="product-container">
-    <ng-container *ngFor="let item of products">
-        <div id="container">
-            <div id="product-item">
-                <button  id="wish-icon">
-                    <i class="fa fa-heart-o" style="font-size:20px;color:red"></i>
-                </button>
-                <img src={{item.product_img}}>
-                <h4>{{item.product_Name}}</h4>
-                <p>{{item.product_Desc}}</p>
-                <h4>Rs {{item.product_Price}}/-</h4>
-                <button id="button-right">Add to Cart</button>
-                <button>Buy Now</button>
+<div class="product-container">
+    <ng-container *ngFor="let item of productList">
+        <div class="container">
+            <div class="product-item">
+                <img src={{item.image}}>
+                <h4 >{{item.title}}</h4>
+                <!-- <p>{{item.description}}</p> -->
+                <h4>Rs {{item.price}}/-</h4>
+                <h4>Rating:{{item.rating.rate}}</h4>
+                <button class="AddToCartbutton" (click)=addtoCart(item)>Add to Cart</button>
+                <i class="fa fa-heart" style="font-size:20px;" (click)=addtoWish(item)>
+                    <span class="tooltiptext">Add to wishlist</span></i>
             </div>
         </div>
     </ng-container>

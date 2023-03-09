@@ -1,35 +1,67 @@
-#product-item  > img
-    width:150px
-    height:200px
-    background-size: cover
-#product-container
-    position: relative
+.product-item  > img
+    width:10em
+    height:12em
+    border-radius: 2em
+
+.product-container
     display: grid
-    grid-template-columns: auto auto auto auto
-    padding:10px
-    margin-left:140px
-   
-#product-item
-    padding:20px
-    text-align: center
+    grid-template-columns: auto auto auto
+    padding:0.5em
+    margin-left:15em
+    justify-content: space-evenly
+    column-gap: 5%
+    row-gap: 1%
+  
+
+
+.AddToCartbutton:hover
+    background: #5459de
+    color: white
     
-#container:hover,button:hover
-    transform: scale(1.1)
-    border: 1px solid black
-    border-radius: 20px
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5)
-#wish-icon
-    position: absolute
-    // display: inline-block
-    background-color: transparent
+
+i
+    position: relative
+    display: inline-flex
+    flex-direction: column-reverse
+    left:0%
+    bottom:1em
     cursor: pointer
     
+
+i .tooltiptext
+    visibility: hidden
+    background: black
+    color: white
+    text-align: center
+    border-radius: 0.5em
+    font-size: 0.9em
+    padding: 0.2em
+    poition: absolute
+
+i:hover .tooltiptext
+        visibility: visible
+    
+.product-item
+    padding:10px
+    text-align: center
+    
+.container:hover
+    transition: 2s
+    border: 1px solid black
+    border-radius: 2em
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5)
+    background: #99ccff
+    font-family: "Times New Roman", Times, serif
+    font-size:1em
+    
+p
+    font-family: 'Courier New', monospace 
 header
     text-align: center
     font-family: "Audiowide", sans-serif
-    padding:20px
-button
-    border-radius: 20px
-    padding:10px
-#button-right
-    margin-right: 20px
+    padding-top: 3em
+button 
+    border-radius: 2em
+    padding: 1em
+    cursor: pointer
+    // margin: 20px

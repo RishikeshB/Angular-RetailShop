@@ -9,7 +9,8 @@ import { ProductsComponent } from './products/products.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ListComponent } from './orders/list/list.component';
 import { AddComponent } from './orders/add/add.component';
-
+import {HttpClientModule} from '@angular/common/http';
+import { WishlistComponent } from './wishlist/wishlist.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,11 +19,13 @@ import { AddComponent } from './orders/add/add.component';
     ProductsComponent,
     OrdersComponent,
     ListComponent,
-    AddComponent
+    AddComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

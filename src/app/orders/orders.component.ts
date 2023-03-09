@@ -1,3 +1,4 @@
+import { CartService } from './../services/cart.service';
 import { Component } from '@angular/core';
 
 @Component({

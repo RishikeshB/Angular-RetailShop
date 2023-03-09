@@ -1,0 +1,33 @@
+<div class="cart-table">
+    <label>Total Items in WishList:</label><p style="border:0.2em solid;width:10em;text-align: center;">{{wishList.length}}</p>
+    
+    <table class="table-responsive">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Product Name</th>
+                <th>Product Img</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>quantity</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let items of wishList;let i=index">
+                <td>{{i+1}}</td>
+                <td>{{items.title}}</td>
+                <td><img style="width: 120px;" src="{{items.image}}" alt="product_img"></td>
+                <td>{{items.description}}</td>
+                <td>{{items.price}}</td>
+                <td>{{items.quantity}}</td>
+                <td>
+                    <button><i class="fa fa-trash" (click)="removeItem(items)">Delete</i></button>
+                    <button><i class='fas fa-cart-plus' style='font-size:1.0em;' (click)="addToCart(items)">Cart</i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button (click)="emptyWishList()">Empty Cart</button>
+</div>
+
