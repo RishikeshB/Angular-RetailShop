@@ -9,9 +9,7 @@ export class ServiceService {
 
   getProduct() {
     return this.http
-      .get<any>(
-        'cdn-frontdoor-rishi-f8b7aecxh6cudgf5.z01.azurefd.net/getProducts'
-      )
+      .get<any>('https://ms007.azurewebsites.net/getProducts')
       .pipe(
         map((res: any) => {
           return res;
